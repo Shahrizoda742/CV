@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahrizoda Nizomova — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blush: #eef2f7;
+    --rose: #d0dce8;
+    --dusty: #2d6a9f;
+    --deep: #1a4f7a;
+    --ink: #1a2332;
+    --muted: #6b7a8d;
+    --cream: #f7f8fa;
+    --white: #ffffff;
+    --accent: #2d6a9f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── GRAIN OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: linear-gradient(145deg, #1a2f45 0%, #1e3a52 40%, #162840 100%);
+    padding: 80px 60px 60px;
+    overflow: hidden;
+    border-bottom: 1px solid #2a3a52;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(45,106,159,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(45,106,159,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #a8cce8;
+    background: rgba(45,106,159,0.15);
+    border: 1px solid rgba(45,106,159,0.35);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 8vw, 78px);
+    font-weight: 300;
+    line-height: 1.0;
+    color: #f0f5fa;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: #7eb8d4;
+  }
+
+  .hero-role {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7a9ab5;
+    margin-bottom: 28px;
+  }
+
+  .hero-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+    color: #a8cce8;
+  }
+
+  .hero-contact a {
+    color: #a8cce8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+
+  .hero-contact a:hover { color: #ffffff; }
+
+  .contact-dot {
+    width: 4px; height: 4px;
+    background: #4a80a8;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 60px 80px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-top: 52px;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .section:nth-child(1) { animation-delay: 0.1s; }
+  .section:nth-child(2) { animation-delay: 0.2s; }
+  .section:nth-child(3) { animation-delay: 0.3s; }
+  .section:nth-child(4) { animation-delay: 0.4s; }
+  .section:nth-child(5) { animation-delay: 0.5s; }
+  .section:nth-child(6) { animation-delay: 0.6s; }
+  .section:nth-child(7) { animation-delay: 0.65s; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dusty);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--rose), transparent);
+  }
+
+  /* ── SUMMARY ── */
+  .summary-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 700px;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 24px;
+    background: var(--white);
+    border-left: 3px solid var(--dusty);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 16px rgba(45,106,159,0.08);
+  }
+
+  .edu-main h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .edu-main p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .edu-gpa {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--dusty);
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .edu-gpa span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: -4px;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-group {
+    background: var(--white);
+    border: 1px solid var(--rose);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .skill-group:hover {
+    box-shadow: 0 4px 20px rgba(45,106,159,0.12);
+    transform: translateY(-2px);
+  }
+
+  .skill-group h4 {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dusty);
+    margin-bottom: 8px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tag {
+    font-size: 12px;
+    color: var(--deep);
+    background: var(--blush);
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-weight: 400;
+  }
+
+  /* ── PROJECTS ── */
+  .project-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 16px rgba(45,106,159,0.07);
+    border: 1px solid transparent;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(to right, var(--deep), var(--dusty));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover::before { transform: scaleX(1); }
+
+  .project-card:hover {
+    border-color: var(--rose);
+    box-shadow: 0 6px 28px rgba(45,106,159,0.13);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .project-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .project-meta {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 3px;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-bottom: 12px;
+  }
+
+  .project-link:hover { color: var(--deep); }
+
+  .project-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .project-card ul li {
+    font-size: 13.5px;
+    color: #3a4a5c;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .project-card ul li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    font-size: 7px;
+    color: var(--dusty);
+    top: 6px;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .tech-pill {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--deep);
+    background: var(--blush);
+    border: 1px solid var(--rose);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── TWO-COL ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* ── LANGUAGES ── */
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--rose);
+    margin-bottom: 8px;
+  }
+
+  .lang-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  .lang-level {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dusty);
+  }
+
+  /* ── INTERESTS ── */
+  .interests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .interest-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 18px;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--rose);
+    font-size: 13.5px;
+    color: #3a4a5c;
+    line-height: 1.5;
+    transition: background 0.2s;
+  }
+
+  .interest-item:hover { background: var(--blush); }
+
+  .interest-icon {
+    font-size: 15px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  /* ── CERT ── */
+  .cert-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, #1a3a5c 0%, #2d6a9f 100%);
+    border-radius: 10px;
+    color: white;
+  }
+
+  .cert-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .cert-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding-left: 16px;
+  }
+
+  .cert-score span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    border-top: 1px solid var(--rose);
+    margin-top: 60px;
+  }
+
+  /* ── HERO ANIM ── */
+  .hero-inner { animation: heroIn 0.8s ease both; }
+  @keyframes heroIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 50px 24px 40px; }
+    .page { padding: 0 24px 60px; }
+    .two-col { grid-template-columns: 1fr; }
+    .edu-block { flex-direction: column; }
+    .project-header { flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">CV · 2026</div>
+    <h1>Shahrizoda<br><em>Nizomova</em></h1>
+    <p class="hero-role">Aspiring ML Engineer &amp; Data Steward</p>
+    <div class="hero-contact">
+      <a href="tel:+998933359969">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.93a16 16 0 006.29 6.29l1.3-1.3a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.03z"/></svg>
+        +998 93 335 99 69
+      </a>
+      <span class="contact-dot"></span>
+      <a href="mailto:nshahrizoda23@gmail.com">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        nshahrizoda23@gmail.com
+      </a>
+      <span class="contact-dot"></span>
+      <a href="https://www.linkedin.com/in/shahrizoda-nizomova-73703235a/" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <span class="contact-dot"></span>
+      <a href="https://github.com/Shahrizoda742" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+      <span class="contact-dot"></span>
+      <span>Tashkent, Uzbekistan</span>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- SUMMARY -->
+  <section class="section">
+    <div class="section-label">Summary</div>
+    <p class="summary-text">
+      Aspiring Machine Learning Engineer with a foundation in Python, data analysis, and ML model development. Passionate about applying data-driven solutions to real-world problems and eager to grow through hands-on experience in data stewardship and AI-powered projects.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <div class="section-label">Education</div>
+    <div class="edu-block">
+      <div class="edu-main">
+        <h3>INHA University in Tashkent</h3>
+        <p>BA in Computer Science &nbsp;·&nbsp; Sep 2024 – May 2028</p>
+        <p style="font-size:13px; color:var(--muted); margin-top:6px;">Relevant Coursework: Creative Engineering Design Course – Multiple Projects</p>
+      </div>
+      <div class="edu-gpa">
+        4.20<span style="font-size:11px; color:var(--muted);">/4.5</span>
+        <span>GPA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="section-label">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>ML / Data</h4>
+        <div class="skill-tags">
+          <span class="tag">NumPy</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Jupyter</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Web</h4>
+        <div class="skill-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <div class="skill-tags">
+          <span class="tag">Git</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Google Colab</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="section-label">Projects</div>
+
+<!-- Project 1: Genomic -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>ML Genomic Classification Project</h3>
+        <span class="project-meta">Computational Oncology Research &nbsp;·&nbsp; May 2026 – Jun 2026</span>
+      </div>
+      <ul>
+        <li>Performed high-dimensional feature extraction and dimensionality reduction using <strong>Principal Component Analysis (PCA)</strong> on a transcriptomic dataset of brain tissue samples</li>
+        <li>Engineered a cost-sensitive data pipeline using <strong>Dynamic Sample Weight Balancing</strong> to mitigate severe class imbalances across rare tumor cohorts (Ependymoma vs. Medulloblastoma)</li>
+        <li>Implemented and optimized an <strong>XGBoost classifier</strong>, utilizing L1 and L2 regularization parameters to prevent overfitting on constrained test sets (N=26)</li>
+        <li>Evaluated multi-class model performance achieving an overall prediction accuracy of <strong>88.46%</strong>; drove minority class Recall up to 75% to maximize diagnostic sensitivity</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">XGBoost</span>
+        <span class="tech-pill">Scikit-learn</span>
+        <span class="tech-pill">PCA</span>
+        <span class="tech-pill">Pandas</span>
+        <span class="tech-pill">Matplotlib</span>
+      </div>
+    </div>
+
+    <!-- Project 2: ML -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>ML Data Classification Project</h3>
+        <span class="project-meta">MLC Course &nbsp;·&nbsp; Feb 2026 – Jun 2026</span>
+      </div>
+      <ul>
+        <li>Applied <strong>Linear &amp; Polynomial Regression</strong> on <em>homeprices</em> dataset to predict housing values; evaluated models using MAE, RMSE, and R² metrics</li>
+        <li>Performed <strong>outlier detection and data cleaning</strong> on <em>Ames_Housing_Data.csv</em>; applied feature engineering, Label Encoding, and One-Hot Encoding for model-ready input</li>
+        <li>Implemented <strong>Cross-Validation (K-Fold)</strong> on <em>advertising.csv</em> to assess model generalization; compared Ridge, Lasso, and Elastic Net regularization techniques</li>
+        <li>Built and evaluated <strong>Logistic Regression classifiers</strong> using Confusion Matrix, Precision, Recall, F1-score, ROC Curve, and AUC</li>
+        <li>Performed residual analysis and threshold tuning to optimize classification performance</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Scikit-learn</span>
+        <span class="tech-pill">Pandas</span>
+        <span class="tech-pill">Matplotlib</span>
+        <span class="tech-pill">Jupyter</span>
+      </div>
+    </div>
+
+    <!-- Project 3: Voice Assistant -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Voice Assistant App</h3>
+        <span class="project-meta">University Team Project &nbsp;·&nbsp; Sep 2025 – Feb 2026</span>
+      </div>
+      <ul>
+        <li>Developed an <strong>accessibility-focused voice assistant</strong> using Google Text-to-Speech (TTS) API, designed for busy professionals, drivers, doctors, and users with physical limitations</li>
+        <li>Implemented <strong>speech-to-text input</strong> allowing users to verbally create reminders, tasks, and daily plans hands-free</li>
+        <li>App reads out the user's schedule and pending tasks aloud, enabling fully <strong>voice-driven productivity</strong> without screen interaction</li>
+      </ul>
+      <div class="project-tech">
+        <span class="tech-pill">Java</span>
+        <span class="tech-pill">Google TTS API</span>
+        <span class="tech-pill">Speech Recognition</span>
+      </div>
+    </div>
+
+    <!-- Project 3: Charity -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Charity App</h3>
+        <span class="project-meta">University Team Project &nbsp;·&nbsp; Sep 2024 – May 2025</span>
+      </div>
+      <a class="project-link" href="https://www.figma.com/design/n6n7KbDABdlN6Ky9FLoDon/Ehson-App?node-id=0-1&t=E2BtoxZEVZWfiZ7S-0" target="_blank">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View Figma Design
+      </a>
+      <ul>
+        <li>Collaborated with a team in Creative Engineering Design course to design and develop a <strong>charity platform connecting donors with verified people in need</strong></li>
+        <li>Integrated an <strong>AI-powered matching system</strong> to pair donors with suitable recipients based on need type and location</li>
+        <li>Implemented <strong>AI verification logic</strong> that cross-checks applicants against government databases to ensure only genuinely eligible recipients receive aid — preventing misuse</li>
+        <li>Added a <strong>donation transparency feature</strong> where recipients share photos of how donations were used, giving donors a real sense of fulfilment and trust in the process</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LANGUAGES + CERT -->
+  <section class="section">
+    <div class="two-col">
+      <div>
+        <div class="section-label">Languages</div>
+        <div class="lang-item">
+          <span class="lang-name">English</span>
+          <span class="lang-level">Advanced</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Russian</span>
+          <span class="lang-level">Pre-Intermediate</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Uzbek</span>
+          <span class="lang-level">Native</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Certification</div>
+        <div class="cert-block">
+          <div>
+            <div class="cert-name">IELTS</div>
+            <div style="font-size:11px; opacity:0.75; margin-top:2px;">International English Language Testing System</div>
+          </div>
+          <div class="cert-score">
+            7.0
+            <span>Band Score</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="section">
+    <div class="section-label">Interests</div>
+    <div class="interests-list">
+      <div class="interest-item">
+        <span class="interest-icon">🗄️</span>
+        Data quality, data governance, and ensuring accuracy of information in real-world systems
+      </div>
+      <div class="interest-item">
+        <span class="interest-icon">🤖</span>
+        Applying machine learning to solve socially meaningful problems
+      </div>
+      <div class="interest-item">
+        <span class="interest-icon">⚖️</span>
+        Exploring AI ethics and responsible use of data in decision-making
+      </div>
+      <div class="interest-item">
+        <span class="interest-icon">📈</span>
+        Continuously building technical depth in Python, ML pipelines, and data analysis
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  Shahrizoda Nizomova &nbsp;·&nbsp; Tashkent, Uzbekistan &nbsp;·&nbsp; 2026
+</footer>
+
+</body>
+</html>
