@@ -7,15 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --blush: #eef2f7;
-    --rose: #d0dce8;
-    --dusty: #2d6a9f;
-    --deep: #1a4f7a;
-    --ink: #1a2332;
-    --muted: #6b7a8d;
-    --cream: #f7f8fa;
+    --blush: #f9e8e8;
+    --rose: #e8c4c4;
+    --dusty: #c9898f;
+    --deep: #8b4a52;
+    --ink: #2a1a1c;
+    --muted: #7a6065;
+    --cream: #fdf6f6;
     --white: #ffffff;
-    --accent: #2d6a9f;
+    --accent: #d4717a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,10 +44,9 @@
   /* ── HERO ── */
   .hero {
     position: relative;
-    background: linear-gradient(145deg, #1a2f45 0%, #1e3a52 40%, #162840 100%);
+    background: linear-gradient(145deg, #f5d5d8 0%, #edd5d8 40%, #e8c8cc 100%);
     padding: 80px 60px 60px;
     overflow: hidden;
-    border-bottom: 1px solid #2a3a52;
   }
 
   .hero::after {
@@ -55,7 +54,7 @@
     position: absolute;
     top: -80px; right: -80px;
     width: 380px; height: 380px;
-    background: radial-gradient(circle, rgba(45,106,159,0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -65,7 +64,7 @@
     position: absolute;
     bottom: -40px; left: -40px;
     width: 220px; height: 220px;
-    background: radial-gradient(circle, rgba(45,106,159,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212,113,122,0.15) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -84,9 +83,9 @@
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #a8cce8;
-    background: rgba(45,106,159,0.15);
-    border: 1px solid rgba(45,106,159,0.35);
+    color: var(--deep);
+    background: rgba(255,255,255,0.5);
+    border: 1px solid rgba(139,74,82,0.2);
     padding: 5px 14px;
     border-radius: 20px;
     margin-bottom: 24px;
@@ -97,14 +96,14 @@
     font-size: clamp(48px, 8vw, 78px);
     font-weight: 300;
     line-height: 1.0;
-    color: #f0f5fa;
+    color: var(--ink);
     letter-spacing: -0.01em;
     margin-bottom: 6px;
   }
 
   .hero h1 em {
     font-style: italic;
-    color: #7eb8d4;
+    color: var(--deep);
   }
 
   .hero-role {
@@ -113,7 +112,7 @@
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #7a9ab5;
+    color: var(--muted);
     margin-bottom: 28px;
   }
 
@@ -122,11 +121,11 @@
     flex-wrap: wrap;
     gap: 8px 20px;
     font-size: 13px;
-    color: #a8cce8;
+    color: var(--deep);
   }
 
   .hero-contact a {
-    color: #a8cce8;
+    color: var(--deep);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -134,11 +133,11 @@
     transition: color 0.2s;
   }
 
-  .hero-contact a:hover { color: #ffffff; }
+  .hero-contact a:hover { color: var(--accent); }
 
   .contact-dot {
     width: 4px; height: 4px;
-    background: #4a80a8;
+    background: var(--dusty);
     border-radius: 50%;
     display: inline-block;
   }
@@ -210,7 +209,7 @@
     background: var(--white);
     border-left: 3px solid var(--dusty);
     border-radius: 0 8px 8px 0;
-    box-shadow: 0 2px 16px rgba(45,106,159,0.08);
+    box-shadow: 0 2px 16px rgba(139,74,82,0.07);
   }
 
   .edu-main h3 {
@@ -262,7 +261,7 @@
   }
 
   .skill-group:hover {
-    box-shadow: 0 4px 20px rgba(45,106,159,0.12);
+    box-shadow: 0 4px 20px rgba(139,74,82,0.1);
     transform: translateY(-2px);
   }
 
@@ -296,7 +295,7 @@
     border-radius: 12px;
     padding: 26px 28px;
     margin-bottom: 16px;
-    box-shadow: 0 2px 16px rgba(45,106,159,0.07);
+    box-shadow: 0 2px 16px rgba(139,74,82,0.06);
     border: 1px solid transparent;
     transition: border-color 0.25s, box-shadow 0.25s;
     position: relative;
@@ -308,7 +307,7 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 3px;
-    background: linear-gradient(to right, var(--deep), var(--dusty));
+    background: linear-gradient(to right, var(--dusty), var(--rose));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -318,7 +317,7 @@
 
   .project-card:hover {
     border-color: var(--rose);
-    box-shadow: 0 6px 28px rgba(45,106,159,0.13);
+    box-shadow: 0 6px 28px rgba(139,74,82,0.12);
   }
 
   .project-header {
@@ -368,7 +367,7 @@
 
   .project-card ul li {
     font-size: 13.5px;
-    color: #3a4a5c;
+    color: #4a3538;
     padding-left: 16px;
     position: relative;
     line-height: 1.6;
@@ -451,7 +450,7 @@
     border-radius: 8px;
     border: 1px solid var(--rose);
     font-size: 13.5px;
-    color: #3a4a5c;
+    color: #4a3538;
     line-height: 1.5;
     transition: background 0.2s;
   }
@@ -470,7 +469,7 @@
     align-items: center;
     gap: 16px;
     padding: 18px 24px;
-    background: linear-gradient(135deg, #1a3a5c 0%, #2d6a9f 100%);
+    background: linear-gradient(135deg, var(--deep) 0%, #b05a62 100%);
     border-radius: 10px;
     color: white;
   }
@@ -505,7 +504,7 @@
     text-align: center;
     padding: 32px;
     font-size: 12px;
-    color: var(--muted);
+    color: var(--dusty);
     letter-spacing: 0.08em;
     border-top: 1px solid var(--rose);
     margin-top: 60px;
@@ -534,7 +533,7 @@
   <div class="hero-inner">
     <div class="hero-tag">CV · 2026</div>
     <h1>Shahrizoda<br><em>Nizomova</em></h1>
-    <p class="hero-role">Aspiring ML Engineer &amp; Data Steward</p>
+    <p class="hero-role">Computer Science Student · Machine Learning &amp; Computational Biology</p>
     <div class="hero-contact">
       <a href="tel:+998933359969">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.93a16 16 0 006.29 6.29l1.3-1.3a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.03z"/></svg>
@@ -546,7 +545,7 @@
         nshahrizoda23@gmail.com
       </a>
       <span class="contact-dot"></span>
-      <a href="https://www.linkedin.com/in/shahrizoda-nizomova-73703235a/" target="_blank">
+      <a href="https://linkedin.com/in/shahrizoda_nizomova" target="_blank">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
@@ -567,7 +566,7 @@
   <section class="section">
     <div class="section-label">Summary</div>
     <p class="summary-text">
-      Aspiring Machine Learning Engineer with a foundation in Python, data analysis, and ML model development. Passionate about applying data-driven solutions to real-world problems and eager to grow through hands-on experience in data stewardship and AI-powered projects.
+      Computer Science undergraduate (GPA 4.20/4.5) at INHA University in Tashkent with hands-on experience in machine learning model development and data-driven application design. Built and evaluated classification and regression pipelines across multiple real-world datasets, applying techniques including regularization, cross-validation, and threshold tuning. Developed AI-powered systems for social impact, including an intelligent donor-recipient matching platform with automated eligibility verification. Seeking research opportunities in computational biology and applied machine learning at the intersection of data science and life sciences.
     </p>
   </section>
 
@@ -577,8 +576,7 @@
     <div class="edu-block">
       <div class="edu-main">
         <h3>INHA University in Tashkent</h3>
-        <p>BA in Computer Science &nbsp;·&nbsp; Sep 2024 – May 2028</p>
-        <p style="font-size:13px; color:var(--muted); margin-top:6px;">Relevant Coursework: Creative Engineering Design Course – Multiple Projects</p>
+        <p>BA in Computer Science &nbsp;·&nbsp; Sep 2024 – Jun 2028</p>
       </div>
       <div class="edu-gpa">
         4.20<span style="font-size:11px; color:var(--muted);">/4.5</span>
@@ -592,11 +590,11 @@
     <div class="section-label">Technical Skills</div>
     <div class="skills-grid">
       <div class="skill-group">
-        <h4>Languages</h4>
+        <h4>Programming Languages</h4>
         <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">C++</span>
-          <span class="tag">Java</span>
+          <span class="tag">Python (Intermediate)</span>
+          <span class="tag">C++ (Upper-Intermediate)</span>
+          <span class="tag">Java (Intermediate)</span>
           <span class="tag">SQL</span>
         </div>
       </div>
@@ -607,14 +605,13 @@
           <span class="tag">Pandas</span>
           <span class="tag">Scikit-learn</span>
           <span class="tag">Matplotlib</span>
-          <span class="tag">Jupyter</span>
+          <span class="tag">Jupyter Notebook</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>Web</h4>
+        <h4>Web Technologies</h4>
         <div class="skill-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
+          <span class="tag">HTML/CSS (Intermediate)</span>
         </div>
       </div>
       <div class="skill-group">
@@ -632,24 +629,27 @@
   <section class="section">
     <div class="section-label">Projects</div>
 
-<!-- Project 1: Genomic -->
+    <!-- Project 1: Gene Expression -->
     <div class="project-card">
       <div class="project-header">
-        <h3>ML Genomic Classification Project</h3>
-        <span class="project-meta">Computational Oncology Research &nbsp;·&nbsp; May 2026 – Jun 2026</span>
+        <h3>Gene Expression Classification of Brain Tumor Subtypes</h3>
+        <span class="project-meta">March 2026 &nbsp;·&nbsp; June 2026</span>
       </div>
+      <!-- TODO: replace href with the project's repository URL -->
+      <a class="project-link" href="https://github.com/Shahrizoda742" target="_blank">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View on GitHub
+      </a>
       <ul>
-        <li>Performed high-dimensional feature extraction and dimensionality reduction using <strong>Principal Component Analysis (PCA)</strong> on a transcriptomic dataset of brain tissue samples</li>
-        <li>Engineered a cost-sensitive data pipeline using <strong>Dynamic Sample Weight Balancing</strong> to mitigate severe class imbalances across rare tumor cohorts (Ependymoma vs. Medulloblastoma)</li>
-        <li>Implemented and optimized an <strong>XGBoost classifier</strong>, utilizing L1 and L2 regularization parameters to prevent overfitting on constrained test sets (N=26)</li>
-        <li>Evaluated multi-class model performance achieving an overall prediction accuracy of <strong>88.46%</strong>; drove minority class Recall up to 75% to maximize diagnostic sensitivity</li>
+        <li>Built a <strong>classification pipeline</strong> on a 54,675-feature gene expression microarray dataset (130 patients, 5 tumor subtypes), applying StandardScaler and <strong>PCA</strong> for dimensionality reduction before classification</li>
+        <li>Validated the choice of principal component count empirically by comparing cumulative explained variance and downstream classification accuracy across multiple component values, rather than selecting a value arbitrarily</li>
+        <li>Trained a <strong>Random Forest classifier</strong> with class-weight balancing to address class imbalance; evaluated performance using accuracy, precision, recall, F1-score, and confusion matrix analysis (<strong>88.5% test accuracy</strong>)</li>
       </ul>
       <div class="project-tech">
         <span class="tech-pill">Python</span>
-        <span class="tech-pill">XGBoost</span>
         <span class="tech-pill">Scikit-learn</span>
-        <span class="tech-pill">PCA</span>
         <span class="tech-pill">Pandas</span>
+        <span class="tech-pill">NumPy</span>
         <span class="tech-pill">Matplotlib</span>
       </div>
     </div>
@@ -658,8 +658,13 @@
     <div class="project-card">
       <div class="project-header">
         <h3>ML Data Classification Project</h3>
-        <span class="project-meta">MLC Course &nbsp;·&nbsp; Feb 2026 – Jun 2026</span>
+        <span class="project-meta">MLC Course Project &nbsp;·&nbsp; Feb 2026 – March 2026</span>
       </div>
+      <!-- TODO: replace href with the project's repository URL -->
+      <a class="project-link" href="https://github.com/Shahrizoda742" target="_blank">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View on GitHub
+      </a>
       <ul>
         <li>Applied <strong>Linear &amp; Polynomial Regression</strong> on <em>homeprices</em> dataset to predict housing values; evaluated models using MAE, RMSE, and R² metrics</li>
         <li>Performed <strong>outlier detection and data cleaning</strong> on <em>Ames_Housing_Data.csv</em>; applied feature engineering, Label Encoding, and One-Hot Encoding for model-ready input</li>
@@ -694,7 +699,7 @@
       </div>
     </div>
 
-    <!-- Project 3: Charity -->
+    <!-- Project 4: Charity -->
     <div class="project-card">
       <div class="project-header">
         <h3>Charity App</h3>
@@ -706,9 +711,9 @@
       </a>
       <ul>
         <li>Collaborated with a team in Creative Engineering Design course to design and develop a <strong>charity platform connecting donors with verified people in need</strong></li>
-        <li>Integrated an <strong>AI-powered matching system</strong> to pair donors with suitable recipients based on need type and location</li>
-        <li>Implemented <strong>AI verification logic</strong> that cross-checks applicants against government databases to ensure only genuinely eligible recipients receive aid — preventing misuse</li>
-        <li>Added a <strong>donation transparency feature</strong> where recipients share photos of how donations were used, giving donors a real sense of fulfilment and trust in the process</li>
+        <li>Integrated an <strong>AI-powered matching system</strong> to pair donors with recipients based on health need type and geographic location — an approach with direct parallels to patient-resource matching in healthcare systems</li>
+        <li>Implemented <strong>AI verification logic</strong> that cross-checks applicants against government databases to ensure only genuinely eligible recipients receive aid — preventing misuse of the platform</li>
+        <li>Added a <strong>donation transparency feature</strong> where recipients share photos of how donations were used, giving donors a real sense of fulfillment and trust in the process</li>
       </ul>
     </div>
   </section>
@@ -752,16 +757,16 @@
     <div class="section-label">Interests</div>
     <div class="interests-list">
       <div class="interest-item">
-        <span class="interest-icon">🗄️</span>
-        Data quality, data governance, and ensuring accuracy of information in real-world systems
+        <span class="interest-icon">🧬</span>
+        Applying machine learning and data analysis to biomedical and health-related research problems
       </div>
       <div class="interest-item">
-        <span class="interest-icon">🤖</span>
-        Applying machine learning to solve socially meaningful problems
+        <span class="interest-icon">🗄️</span>
+        Data quality, governance, and ensuring accuracy of information in real-world systems
       </div>
       <div class="interest-item">
         <span class="interest-icon">⚖️</span>
-        Exploring AI ethics and responsible use of data in decision-making
+        Exploring AI ethics and responsible use of data in medical and social decision-making
       </div>
       <div class="interest-item">
         <span class="interest-icon">📈</span>
